@@ -42,3 +42,5 @@
     - http://想监控的服务:端口/hystrix.stream进行测试
 
     - 此时，我们可以尝试将microservice-provider-user停止，然后重复访问多次http://localhost:8011/ribbon/1 （20次以上），会发现断路器状态会变为开启。
+
+## Hystrix 监控数据默认保存在每个实例的内存中。Spring 提供了多重方式，可以导入 Redis/TSDB 中

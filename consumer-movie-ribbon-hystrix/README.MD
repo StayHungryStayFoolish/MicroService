@@ -49,5 +49,3 @@ data: {"type":"HystrixCommand","name":"findById","group":"RibbonHystrixService",
 并且会不断刷新以获取实时监控数据。但纯文本输出，可读性太差。
 
 建议使用 Hystrix Dashboard 具有可视化页面
-
-**Feign-Hystrix 没有上述功能**

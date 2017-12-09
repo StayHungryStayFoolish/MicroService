@@ -12,9 +12,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  * @EnableFeignClients
  * 开启 Feign 伪 HTTP 客户端
  */
-@EnableCircuitBreaker
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableCircuitBreaker
 @SpringBootApplication
 public class ConsumerMovieFeignHystrixApplication {
 

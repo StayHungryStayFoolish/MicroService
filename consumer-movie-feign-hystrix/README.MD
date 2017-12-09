@@ -29,7 +29,7 @@
 
 - 主程序
 
-@EnableCircuitBreaker 开启断路器
+@EnableCircuitBreaker 开启断路器，配合 `Hystrix Dashboard` 使用
 
 @EnableFeignClients 开启 Feign 伪 HTTP 客户端
 
@@ -63,13 +63,23 @@ feign:
 
 ## 启动方式
 
-1. 启动 Discovery Eureka
+1. 启动 Discovery Eureka 服务注册发现中心
 
-2. 启动 Provider User
+2. 启动 Provider User 服务提供中心
 
-3. 启动 Consumer Movie Feign Hystrix
+3. 启动 Consumer Movie Feign Hystrix  服务消费中心
 
-4. 访问 http://localhost:8012/feign/1
+4. 访问 http://localhost:8012/feign/1  监视器 http://localhost:8012/hystrix.stream
 
 5. 关闭 Provider User
+
+## Hystrix Stream 验证方式
+
+1. 启动 Hystrix Dashboard Hystrix 监控仪表盘 http://localhost:8030/hystrix.stream
+
+2. 调用 http://localhost:8012/feigin/1  API
+
+3. 打开 http://localhost:8030/hystrix.stream
+
+4. 输入: http://localhost:8012/hystream.stream  填入 title: feign ，开启监控
 
