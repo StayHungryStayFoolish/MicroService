@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by bonismo@hotmail.com
- * 下午3:38 on 17/12/8.
+ * 下午12:31 on 17/12/9.
  */
 @FeignClient(name = "provider-user")
-public interface UserFeignClient {
+public interface FeignHystrixService {
 
-    @RequestMapping("/{id}")
-    User findByIdFeign(@RequestParam("id") Long id);
+    @RequestMapping(value = "/{id}")
+    User findById(@RequestParam("id") Long id);
 }
