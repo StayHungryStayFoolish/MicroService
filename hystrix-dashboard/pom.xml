@@ -25,6 +25,17 @@
 	</properties>
 
 	<dependencies>
+		<!-- Hystrix Dashboard 监控器仪表盘 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+			<version>1.4.0.RELEASE</version>
+		</dependency>
+		<!-- Spring 监控器 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
