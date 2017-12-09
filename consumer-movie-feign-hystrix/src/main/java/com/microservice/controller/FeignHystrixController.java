@@ -20,6 +20,7 @@ public class FeignHystrixController {
 
     @GetMapping("feign/{id}")
     public User findById(@PathVariable Long id) {
+        System.out.println("----------- 进入 Feign Controller ---------");
         User user = feignHystrixService.findById(id);
         return user;
     }

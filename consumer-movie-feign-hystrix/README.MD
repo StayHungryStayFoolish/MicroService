@@ -47,7 +47,29 @@ Override FallBack 的逻辑讲解方法
 
 **当服务调用异常时，触发逻辑降级服务，调用 FallBack 重写的逻辑降级方法**
 
+## Feign 配置
+
+feign:
+
+  hystrix:
+
+    enabled: true
+
+
+默认为true。如果设置为false，Ribbon将不会从Eureka中获得服务列表，而是使用静态配置的服务列表。静态服务列表可使用：<client>.ribbon.listOfServers来指定。参考：http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#spring-cloud-ribbon-without-eureka
+
+参考：https://spring.io/guides/gs/client-side-load-balancing/
 
 
 ## 启动方式
+
+1. 启动 Discovery Eureka
+
+2. 启动 Provider User
+
+3. 启动 Consumer Movie Feign Hystrix
+
+4. 访问 http://localhost:8012/feign/1
+
+5. 关闭 Provider User
 

@@ -16,6 +16,7 @@ public class FeignHystrixFallBack implements FeignHystrixService {
 
     @Override
     public User findById(Long id) {
+        System.out.println("------- 进入 Feign FallBack ---------");
         FeignHystrixFallBack.LOGGER.info("异常发生，进入 fallBack 放，接收参数异常");
         User user = new User();
         user.setId(-1L);
