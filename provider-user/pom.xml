@@ -58,6 +58,18 @@
 		</dependency>
 	</dependencies>
 
+	<!-- 引入 Spring Cloud 依赖，作用是其他 spring-cloud 组件都引用这个版本 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.RC1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>

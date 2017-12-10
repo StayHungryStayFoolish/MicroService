@@ -2,7 +2,7 @@ server:
   port: 8012
 spring:
   application:
-    name: consumer-movie-ribbon-hystrix
+    name: consumer-movie-feign-hystrix
 eureka:
   client:
     serviceUrl:
