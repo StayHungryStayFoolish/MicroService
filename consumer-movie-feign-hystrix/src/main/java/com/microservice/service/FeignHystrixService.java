@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "provider-user", fallback = FeignHystrixFallBack.class)
 public interface FeignHystrixService {
 
+    /*** @FeignClient 不支持 @GetMapping 缩写注解      ******************/
     @RequestMapping(value = "/{id}")
     User findById(@RequestParam("id") Long id);
 

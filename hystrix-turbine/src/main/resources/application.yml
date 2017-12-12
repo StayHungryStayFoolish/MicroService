@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-hystrix-turbine
+    name: hystrix-turbine
 server:
   port: 8031
 security:
@@ -9,7 +9,7 @@ security:
 turbine:
   aggregator:
     clusterConfig: default   # 指定聚合哪些集群，多个使用","分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
-  appConfig: consumer-movie-feign-hystrix,microservice-consumer-movie-ribbon-hystrix  # 配置Eureka中的serviceId列表，表明监控哪些服务
+  appConfig: consumer-movie-feign-hystrix,consumer-movie-ribbon-hystrix  # 配置Eureka中的serviceId列表，表明监控哪些服务
   clusterNameExpression: new String("default")
 
 # 1. clusterNameExpression指定集群名称，默认表达式appName；此时：turbine.aggregator.clusterConfig需要配置想要监控的应用名称

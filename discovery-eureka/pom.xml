@@ -29,6 +29,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<version>1.4.0.RELEASE</version>
 		</dependency>
 
 		<dependency>
@@ -58,6 +59,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
